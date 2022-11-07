@@ -8,9 +8,12 @@ class QuestionsController < ApplicationController
       @answer = "I don't care, leave me alone!"
     elsif params[:question] == 'what time is it?'
       @answer = Time.now.to_s # or "#{Time.now}"
+    else
+      @answer = 'What kinda question is that?'
     end
 
     # .end_with?("?")
+
     # case
     # when params[:question] == 'hello'
     #   @answer = "I don't care, leave me alone!"
